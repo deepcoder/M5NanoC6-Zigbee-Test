@@ -39,6 +39,7 @@ In my short internet searching, I was not able to find this file nor any useful 
 https://github.com/espressif/arduino-esp32/tree/master/libraries/ESP32/examples/Zigbee/Zigbee_Light_Bulb
 
 However, instead of using the example code from this respository, use the modified example here in this repository :
+
 https://github.com/deepcoder/M5NanoC6-Zigbee-Test/blob/main/M5NanoC6_Zigbee_v03.ino
 
 This code is modified to use the correct pins for the M5NanoC6 and NeoPixel library. Also, it is modified to set the necessary Zigbee properties to allow the device to be paired into the Zigbee2MQTT system.
@@ -48,6 +49,7 @@ The code also does simple Arduino Serial.Print 's for basic status info in the A
 Other than these changes, the code is just the stock example from the Expressif repository.
 
 6) You should be able to compile and upload this example to you M5NanoC6 device. I found that using a USB hub that has a power switch to turn on and off each of the individual ports makes the 'reset/upload' cycle easier. You do not have to plug and unplug the module as you press the G9 button to get it into programming mode. And you need to power cycle the device after you finish the uploading cycle to get the device to run the code.
+
 https://www.amazon.com/gp/product/B0BYSBDYKN
 
 7) In you Zigbee2MQTT coonfiguration.yaml file, you will need to add the reference to the custom converter file as shown below. Also, you will need to copy this file 'm5nanoc6.js' to the zigbee2mqtt-data directory. You will need to restart Zigbee2MQTT after these changes :
