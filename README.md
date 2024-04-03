@@ -35,6 +35,7 @@ cp: /Users/dproffer/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3
 In my short internet searching, I was not able to find this file nor any useful tips on how to resolve. So, my 'hack' solution was to copy the esp32c3.json file to esp32c6.json and then edit any references to the c3 chip to instead reference the c6 chip. It allows the compile to complete successfully, it probably messes up the debugging function in the Arduino IDE, however I have yet to explore this.
 
 5) Follow the steps to configure the Arduino IDE for a Zigbee project at this URL:
+
 https://github.com/espressif/arduino-esp32/tree/master/libraries/ESP32/examples/Zigbee/Zigbee_Light_Bulb
 
 However, instead of using the example code from this respository, use the modified example here in this repository :
