@@ -28,7 +28,9 @@ void loop() {
 
 4) At some point of this testing, the Arduino IDE would not compile for the ESP32-C6. It threw the error below:
 
+```
 cp: /Users/dproffer/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3/tools/ide-debug/esp32c6.json: No such file or directory
+```
 
 In my short internet searching, I was not able to find this file nor any useful tips on how to resolve. So, my 'hack' solution was to copy the esp32c3.json file to esp32c6.json and then edit any references to the c3 chip to instead reference the c6 chip. It allows the compile to complete successfully, it probably messes up the debugging function in the Arduino IDE, however I have yet to explore this.
 
