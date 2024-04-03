@@ -8,6 +8,7 @@ https://shop.m5stack.com/products/m5stack-nanoc6-dev-kit
 1) Install Arduino IDE. I used version 2.3.2 on MacOS Sonoma 14.4.1.
 
 2) Install needed board manager and libraries for M5Stack NanoC6 as per:
+
 https://docs.m5stack.com/en/core/M5NanoC6
 https://docs.m5stack.com/en/arduino/m5nanoc6/program
 
