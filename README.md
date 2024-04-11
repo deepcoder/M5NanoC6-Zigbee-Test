@@ -35,6 +35,11 @@ cp: /Users/dproffer/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3
 
 In my short internet searching, I was not able to find this file nor any useful tips on how to resolve. So, my 'hack' solution was to copy the esp32c3.json file to esp32c6.json and then edit any references to the c3 chip to instead reference the c6 chip. It allows the compile to complete successfully, it probably messes up the debugging function in the Arduino IDE, however I have yet to explore this.
 
+```
+cp /Users/dproffer/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3/tools/ide-debug/esp32c3.json \
+  /Users/dproffer/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3/tools/ide-debug/esp32c6.json
+```
+
 5) Follow the steps to configure the Arduino IDE for a Zigbee project at this URL:
 
 https://github.com/espressif/arduino-esp32/tree/master/libraries/ESP32/examples/Zigbee/Zigbee_Light_Bulb
@@ -49,11 +54,11 @@ The code also does simple Arduino Serial.Print 's for basic status info in the A
 
 Other than these changes, the code is just the stock example from the Expressif repository.
 
-6) You should be able to compile and upload this example to you M5NanoC6 device. I found that using a USB hub that has a power switch to turn on and off each of the individual ports makes the 'reset/upload' cycle easier. You do not have to plug and unplug the module as you press the G9 button to get it into programming mode. And you need to power cycle the device after you finish the uploading cycle to get the device to run the code.
+6) You should be able to compile and upload this example to your M5NanoC6 device. I found that using a USB hub that has a power switch to turn on and off each of the individual ports makes the 'reset/upload' cycle easier. You do not have to plug and unplug the module as you press the G9 button to get it into programming mode. And you need to power cycle the device after you finish the uploading cycle to get the device to run the code.
 
 https://www.amazon.com/gp/product/B0BRTPJ8FK
 
-7) In you Zigbee2MQTT coonfiguration.yaml file, you will need to add the reference to the custom converter file as shown below. Also, you will need to copy this file 'm5nanoc6.js' to the zigbee2mqtt-data directory. You will need to restart Zigbee2MQTT after these changes :
+7) In your Zigbee2MQTT configuration.yaml file, you will need to add the reference to the custom converter file as shown below. Also, you will need to copy this file 'm5nanoc6.js' to the zigbee2mqtt-data directory. You will need to restart Zigbee2MQTT after these changes :
 
 ```
 external_converters:
