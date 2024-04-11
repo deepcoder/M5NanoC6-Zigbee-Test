@@ -58,7 +58,12 @@ Other than these changes, the code is just the stock example from the Expressif 
 
 https://www.amazon.com/gp/product/B0BRTPJ8FK
 
-7) In your Zigbee2MQTT configuration.yaml file, you will need to add the reference to the custom converter file as shown below. Also, you will need to copy this file 'm5nanoc6.js' to the zigbee2mqtt-data directory. You will need to restart Zigbee2MQTT after these changes :
+7) In your Zigbee2MQTT configuration.yaml file, you will need to add the reference to the custom converter file as shown below. Also, you will need to copy this file 'm5nanoc6.js' to the zigbee2mqtt-data directory. Download this file at the link below and copy to the correct Zigbee2MQTT data directory, or course as you move forward with creating other functions this as well as your code will need to be modified :
+
+```
+https://github.com/deepcoder/M5NanoC6-Zigbee-Test/blob/main/m5nanoc6.js
+```
+You will need to restart Zigbee2MQTT after these changes :
 
 ```
 external_converters:
